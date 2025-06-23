@@ -1,0 +1,16 @@
+<div class="tag-output">
+    <div class="data-label">Generated Tags</div>
+    <div class="tag-string">{{TAG_STRING}}</div>
+</div>
+<div class="tag-breakdown">
+    {{#each tiers}}
+    <div class="tag-tier">
+        <div class="data-label">{{tier_name}} ({{tier_count}} tags)</div>
+        <div class="tier-tags">
+            {{#each tags}}
+            <span class="tag">{{this}}</span>
+            {{/each}}
+        </div>
+    </div>
+    {{/each}}
+</div>

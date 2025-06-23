@@ -1,0 +1,231 @@
+{
+  "product_taxonomy": {
+    "tier_1_essential_identity": {
+      "description": "Required tags for basic categorization and search - minimum 5 tags",
+      "primary_categories": {
+        "tops": {
+          "subcategories": ["blouse", "shirt", "tunic", "tank_top", "camisole", "bodysuit", "sweater", "cardigan", "hoodie", "vest", "poncho", "cape"],
+          "aliases": ["upper_garment", "shirt", "top"]
+        },
+        "bottoms": {
+          "subcategories": ["pants", "jeans", "leggings", "shorts", "skirt", "culottes", "palazzo", "capri", "joggers", "trousers"],
+          "aliases": ["lower_garment", "bottom", "legwear"]
+        },
+        "dresses": {
+          "subcategories": ["maxi_dress", "midi_dress", "mini_dress", "cocktail_dress", "evening_dress", "shift_dress", "wrap_dress", "shirt_dress", "sweater_dress", "slip_dress"],
+          "aliases": ["dress", "frock", "gown"]
+        },
+        "outerwear": {
+          "subcategories": ["jacket", "blazer", "coat", "trench_coat", "parka", "windbreaker", "bomber", "denim_jacket", "leather_jacket", "peacoat", "puffer"],
+          "aliases": ["outer_layer", "coat", "jacket"]
+        }
+      },
+      "primary_colors": ["black", "white", "gray", "red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "beige", "navy", "burgundy"],
+      "formality_levels": {
+        "casual": ["everyday", "relaxed", "weekend", "laid_back", "comfortable"],
+        "smart_casual": ["elevated_casual", "polished_casual", "dressy_casual"],
+        "business_casual": ["work_appropriate", "office_casual", "professional_casual"],
+        "business_formal": ["executive", "corporate", "professional_formal"],
+        "cocktail": ["semi_formal", "party", "evening_casual"],
+        "formal": ["evening_formal", "black_tie_optional", "dressy"],
+        "black_tie": ["ultra_formal", "gala", "red_carpet"]
+      },
+      "season_rating": {
+        "spring": ["transitional", "layering", "light_fabrics", "fresh_colors"],
+        "summer": ["breathable", "cooling", "sun_protection", "vacation_ready"],
+        "fall": ["layering_friendly", "transitional_weight", "autumn_colors"],
+        "winter": ["warming", "heavy_fabrics", "cold_weather", "holiday_appropriate"],
+        "year_round": ["versatile", "climate_adaptable", "season_independent"]
+      }
+    },
+    "tier_2_commercial_intelligence": {
+      "description": "Critical for business operations and customer targeting - 3-4 recommended tags",
+      "price_segments": {
+        "luxury": ["high_end", "designer", "premium_luxury", "ultra_luxury"],
+        "premium": ["upper_mid", "aspirational", "premium_contemporary"],
+        "mid_market": ["mainstream", "accessible_premium", "contemporary"],
+        "value": ["budget_conscious", "affordable", "mass_market"],
+        "fast_fashion": ["trend_driven", "disposable", "ultra_affordable"]
+      },
+      "target_demographics": {
+        "age_appropriateness": {
+          "junior": ["teen", "young_adult", "trendy_youth", "age_16_24"],
+          "misses": ["contemporary", "modern_woman", "age_25_40"],
+          "womens": ["mature", "sophisticated", "age_40_plus"],
+          "universal": ["ageless", "multi_generational", "timeless_appeal"]
+        },
+        "income_levels": ["luxury_consumer", "affluent", "middle_income", "budget_conscious"],
+        "lifestyle_segments": ["career_professional", "work_from_home", "stay_at_home", "student", "retiree", "entrepreneur"],
+        "shopping_behavior": ["trend_follower", "classic_investor", "bargain_hunter", "impulse_buyer", "research_driven"]
+      },
+      "quality_indicators": {
+        "quality_markers": ["luxury", "premium", "mid_range", "budget", "designer", "couture_details", "handmade_elements"],
+        "construction_quality": {
+          "seam_quality": ["french_seams", "serged_seams", "flat_seams", "reinforced_seams", "topstitched"],
+          "finishing": ["lined", "unlined", "partially_lined", "interfaced", "bound_seams"],
+          "hardware_quality": ["premium_hardware", "standard_hardware", "decorative_hardware", "functional_hardware"]
+        },
+        "craftsmanship": ["hand_finished", "machine_finished", "detailed_construction", "basic_construction", "couture_techniques"]
+      }
+    },
+    "tier_3_design_technical": {
+      "description": "Design specifications and technical details - 3-5 recommended tags",
+      "fabric_characteristics": {
+        "material_types": {
+          "natural_fibers": ["cotton", "linen", "silk", "wool", "cashmere", "bamboo", "hemp"],
+          "synthetic_fibers": ["polyester", "nylon", "spandex", "elastane", "acrylic", "rayon", "modal"],
+          "blends": ["cotton_blend", "poly_cotton", "cotton_spandex", "wool_blend", "silk_blend"]
+        },
+        "fabric_weight": ["lightweight", "medium_weight", "heavy_weight", "ultra_light", "substantial"],
+        "fabric_structure": {
+          "weave_types": ["plain_weave", "twill", "satin", "jacquard", "dobby"],
+          "knit_types": ["jersey", "ribbed", "cable_knit", "chunky_knit", "fine_gauge", "sweater_knit"]
+        },
+        "fabric_properties": {
+          "stretch": ["no_stretch", "slight_stretch", "moderate_stretch", "high_stretch", "four_way_stretch"],
+          "drape": ["structured", "semi_structured", "flowing", "crisp", "soft_drape"],
+          "texture": ["smooth", "textured", "brushed", "fleece", "terry", "waffle", "pique"],
+          "performance": ["moisture_wicking", "quick_dry", "uv_protection", "antibacterial", "wrinkle_resistant", "stain_resistant"]
+        },
+        "seasonal_weight": ["summer_weight", "transitional", "winter_weight", "year_round"]
+      },
+      "design_elements": {
+        "color_analysis": {
+          "color_properties": {
+            "saturation": ["pastel", "muted", "vibrant", "neon", "deep", "bright"],
+            "temperature": ["warm_tones", "cool_tones", "neutral_tones"],
+            "finish": ["matte", "satin", "metallic", "iridescent", "glossy"]
+          },
+          "color_combinations": ["solid", "two_tone", "multicolor", "gradient", "ombre", "color_block"]
+        },
+        "patterns_textures": {
+          "pattern_types": ["solid", "striped", "polka_dot", "floral", "geometric", "animal_print", "abstract", "paisley", "plaid", "checkered", "houndstooth", "chevron"],
+          "pattern_scale": ["micro_print", "small_scale", "medium_scale", "large_scale", "oversized_print"],
+          "texture_types": ["smooth", "textured", "ribbed", "cable_knit", "waffle", "corduroy", "velvet", "satin", "lace", "mesh", "sequined", "beaded"]
+        },
+        "construction_details": {
+          "necklines": ["crew_neck", "v_neck", "scoop_neck", "boat_neck", "off_shoulder", "one_shoulder", "halter", "high_neck", "cowl_neck", "square_neck", "sweetheart"],
+          "sleeves": {
+            "length": ["sleeveless", "cap_sleeve", "short_sleeve", "three_quarter", "long_sleeve", "extra_long"],
+            "style": ["fitted", "loose", "bell_sleeve", "bishop_sleeve", "puff_sleeve", "balloon_sleeve", "dolman", "raglan"]
+          },
+          "fit_silhouette": {
+            "fit_type": ["fitted", "slim_fit", "regular_fit", "loose_fit", "oversized", "relaxed"],
+            "silhouette": ["straight", "a_line", "fit_and_flare", "bodycon", "empire_waist", "peplum", "swing", "sheath"]
+          },
+          "length": {
+            "tops": ["crop", "regular", "tunic", "longline", "duster"],
+            "bottoms": ["mini", "short", "knee_length", "midi", "maxi", "floor_length"],
+            "dresses": ["mini", "above_knee", "knee_length", "midi", "maxi", "floor_length"]
+          },
+          "closures": ["pullover", "button_front", "zip_front", "wrap", "tie_front", "hook_and_eye", "snap", "magnetic", "velcro"]
+        }
+      },
+      "functional_features": {
+        "pockets": ["no_pockets", "side_pockets", "back_pockets", "chest_pockets", "hidden_pockets", "patch_pockets", "welt_pockets"],
+        "adjustable_features": ["adjustable_straps", "tie_waist", "drawstring", "elastic_waist", "belt_loops", "adjustable_hem"],
+        "special_features": ["reversible", "convertible", "detachable_parts", "hidden_features", "tech_enabled", "travel_friendly"]
+      }
+    },
+    "tier_4_market_positioning": {
+      "description": "Usage context and market positioning - 2-4 recommended tags",
+      "aesthetic_styles": {
+        "classic": ["timeless", "traditional", "elegant", "refined", "sophisticated"],
+        "trendy": ["fashion_forward", "contemporary", "on_trend", "current"],
+        "bohemian": ["boho", "free_spirited", "artistic", "eclectic", "relaxed"],
+        "minimalist": ["clean_lines", "simple", "understated", "modern", "sleek"],
+        "romantic": ["feminine", "soft", "delicate", "pretty", "sweet"],
+        "edgy": ["bold", "daring", "alternative", "rock", "statement"],
+        "vintage": ["retro", "throwback", "nostalgic", "classic_revival"],
+        "preppy": ["collegiate", "clean_cut", "polished", "americana"],
+        "sporty": ["athletic_inspired", "casual_active", "comfort_focused"],
+        "glamorous": ["luxurious", "dramatic", "show_stopping", "elegant"]
+      },
+      "styling_context": {
+        "occasions": {
+          "work": ["office", "meetings", "presentations", "business_travel", "networking"],
+          "casual": ["weekend", "errands", "coffee_dates", "casual_dining", "shopping"],
+          "social": ["dinner_parties", "date_night", "girls_night", "brunch", "happy_hour"],
+          "formal": ["weddings", "galas", "fundraisers", "award_ceremonies", "opera"],
+          "travel": ["vacation", "resort", "city_break", "business_travel", "cruise"],
+          "special": ["holidays", "celebrations", "photoshoots", "anniversaries", "graduations"]
+        },
+        "styling_versatility": {
+          "wardrobe_role": ["statement_piece", "basic_essential", "accent_piece", "investment_piece", "trend_piece"],
+          "mix_match_potential": ["high_versatility", "moderate_versatility", "specialty_piece", "capsule_worthy"],
+          "layering_capability": ["base_layer", "mid_layer", "outer_layer", "standalone", "layering_friendly"]
+        },
+        "body_type_suitability": {
+          "universal": ["flattering_for_all", "size_inclusive", "adaptable_fit"],
+          "specific_fits": ["curvy_friendly", "straight_figure", "pear_shape", "apple_shape", "athletic_build", "petite_proportions", "tall_proportions"]
+        }
+      },
+      "care_maintenance": {
+        "care_level": ["low_maintenance", "moderate_care", "high_maintenance", "professional_care_only"],
+        "washing_instructions": ["machine_washable", "hand_wash_only", "dry_clean_only", "spot_clean", "cold_wash", "delicate_cycle"],
+        "durability": ["everyday_durability", "delicate_handling", "long_lasting", "investment_quality", "seasonal_wear"]
+      }
+    },
+    "tier_5_specialized_features": {
+      "description": "Specialized categories and performance features - apply as applicable",
+      "specialized_categories": {
+        "adaptive": ["adaptive_clothing", "easy_access", "magnetic_closures", "seated_wear"],
+        "plus_size": ["plus_size", "extended_sizes", "curve_friendly"],
+        "maternity": ["maternity", "nursing_friendly", "bump_accommodating"],
+        "petite": ["petite", "proportioned_for_short", "scaled_sizing"],
+        "tall": ["tall", "extra_length", "proportioned_for_height"]
+      },
+      "performance_features": {
+        "athletic_performance": ["activewear", "athletic_wear", "yoga", "running", "gym_wear"],
+        "technical_features": ["moisture_wicking", "quick_dry", "uv_protection", "antibacterial", "wrinkle_resistant", "stain_resistant"],
+        "comfort_innovations": ["seamless", "tagless", "compression", "cooling", "warming"]
+      },
+      "sustainability": {
+        "eco_factors": ["sustainable_materials", "ethical_production", "eco_friendly", "recycled_materials", "organic_materials"],
+        "lifecycle": ["durable_design", "timeless_style", "repairable", "recyclable", "biodegradable"]
+      }
+    }
+  },
+  "enterprise_tagging_rules": {
+    "tag_combination_formula": {
+      "minimum_requirements": {
+        "tier_1_required": "1 primary_category + 1 subcategory + 1 primary_color + 1 formality_level + 1+ season_rating = 5 minimum tags",
+        "tier_2_recommended": "1 price_segment + 1 age_group + 1 lifestyle + 1 quality_level = +4 tags",
+        "total_minimum": "tier_1 + tier_2 = 9 recommended minimum for enterprise level"
+      },
+      "optimal_combinations": {
+        "tier_3_design": "1-2 fabric_type + 1-2 fit_silhouette + 1-2 construction_details = +3-6 tags",
+        "tier_4_positioning": "1-2 aesthetic_style + 2-3 occasions + 1 wardrobe_role = +4-6 tags",
+        "tier_5_specialized": "0-3 specialized features (as applicable) = +0-3 tags"
+      },
+      "total_tag_range": "minimum 9 tags | optimal 15-18 tags | maximum 20 tags"
+    },
+    "validation_rules": {
+      "mandatory_relationships": {
+        "color_consistency": "primary_color must match available_variants",
+        "category_logic": "subcategory must belong to primary_category",
+        "demographic_alignment": "age_group + lifestyle + price_segment must be compatible",
+        "formality_consistency": "formality_level must align with aesthetic_style + occasions"
+      },
+      "mutually_exclusive_tags": [
+        ["casual", "formal", "black_tie"],
+        ["fitted", "oversized", "loose_fit"],
+        ["mini", "midi", "maxi"],
+        ["luxury", "value", "fast_fashion"],
+        ["junior", "womens"]
+      ],
+      "conditional_requirements": {
+        "if_activewear": ["performance_fabric", "stretch_rating", "activity_type"],
+        "if_formal_or_cocktail": ["quality_level_premium_plus", "occasion_specific"],
+        "if_outerwear": ["seasonal_rating", "layering_capability"],
+        "if_plus_size": ["curve_friendly", "size_inclusive"],
+        "if_price_luxury": ["quality_level_luxury", "construction_quality_premium"]
+      },
+      "tier_dependency_rules": {
+        "tier_1_complete_before_others": "all tier_1 tags required before adding tier_2+",
+        "tier_2_recommended_for_tier_3": "price_segment + quality_level recommended before detailed design tags",
+        "tier_5_requires_justification": "specialized features must be supported by product attributes"
+      }
+    }
+  }
+}

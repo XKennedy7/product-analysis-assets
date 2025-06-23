@@ -1,121 +1,263 @@
 {
   "validation_rules": {
-    "mandatory_relationships": {
-      "color_consistency": {
-        "rule": "primary_color must match available_variants",
-        "validation": "cross_reference_image_vs_json"
+    "image_analysis_validation": {
+      "quality_requirements": {
+        "minimum_resolution": "800x800",
+        "lighting_quality": "adequate_visibility",
+        "angle_preference": "front_view_full_garment",
+        "background_cleanliness": "non_distracting"
       },
-      "category_logic": {
-        "rule": "subcategory must belong to primary_category",
-        "validation": "taxonomy_hierarchy_check"
-      },
-      "demographic_alignment": {
-        "rule": "age_group + lifestyle + price_segment must be compatible",
-        "validation": "demographic_compatibility_matrix"
-      },
-      "formality_consistency": {
-        "rule": "formality_level must align with aesthetic_style + occasions",
-        "validation": "formality_occasion_mapping"
+      "analysis_completeness": {
+        "category_identification": "required_with_confidence",
+        "color_analysis": "primary_secondary_identification",
+        "quality_assessment": "construction_material_evaluation",
+        "fit_silhouette": "comprehensive_analysis"
       }
     },
-    "mutually_exclusive_groups": [
-      {
-        "group": "formality_levels",
-        "exclusive_tags": ["casual", "formal", "black_tie"],
-        "rule": "only_one_per_group"
+    "json_extraction_validation": {
+      "data_completeness": {
+        "required_fields": ["product_id", "title", "vendor", "product_type", "variants"],
+        "recommended_fields": ["description", "tags", "images", "created_at"],
+        "validation_criteria": "all_required_present"
       },
-      {
-        "group": "fit_types", 
-        "exclusive_tags": ["fitted", "oversized", "loose_fit"],
-        "rule": "only_one_per_group"
-      },
-      {
-        "group": "dress_lengths",
-        "exclusive_tags": ["mini", "midi", "maxi"],
-        "rule": "only_one_per_group"
-      },
-      {
-        "group": "price_segments",
-        "exclusive_tags": ["luxury", "value", "fast_fashion"],
-        "rule": "only_one_per_group"
-      },
-      {
-        "group": "age_demographics",
-        "exclusive_tags": ["junior", "womens"],
-        "rule": "only_one_per_group"
-      }
-    ],
-    "conditional_requirements": {
-      "activewear_requirements": {
-        "trigger": "if_category_activewear",
-        "required_tags": ["performance_fabric", "stretch_rating", "activity_type"],
-        "validation": "activewear_specific_validation"
-      },
-      "formal_requirements": {
-        "trigger": "if_formality_formal_or_cocktail", 
-        "required_tags": ["quality_level_premium_plus", "occasion_specific"],
-        "validation": "formal_wear_standards"
-      },
-      "outerwear_requirements": {
-        "trigger": "if_category_outerwear",
-        "required_tags": ["seasonal_rating", "layering_capability"],
-        "validation": "outerwear_functionality_check"
-      },
-      "plus_size_requirements": {
-        "trigger": "if_specialized_plus_size",
-        "required_tags": ["curve_friendly", "size_inclusive"],
-        "validation": "inclusive_sizing_standards"
-      },
-      "luxury_requirements": {
-        "trigger": "if_price_segment_luxury",
-        "required_tags": ["quality_level_luxury", "construction_quality_premium"],
-        "validation": "luxury_standards_compliance"
+      "variant_consistency": {
+        "size_standardization": "consistent_format",
+        "color_matching": "visual_vs_data_alignment",
+        "price_structure": "logical_progression",
+        "availability_status": "current_accurate"
       }
     },
-    "tier_dependency_rules": {
-      "tier_completion_order": {
-        "rule": "tier_1_complete_before_others",
-        "validation": "all tier_1 tags required before adding tier_2+"
-      },
-      "recommended_progression": {
-        "rule": "tier_2_recommended_for_tier_3",
-        "validation": "price_segment + quality_level recommended before detailed design tags"
-      },
-      "specialized_justification": {
-        "rule": "tier_5_requires_justification", 
-        "validation": "specialized features must be supported by product attributes"
-      }
-    },
-    "data_consistency_checks": {
-      "image_vs_json": {
+    "cross_reference_validation": {
+      "image_vs_json_consistency": {
         "color_verification": "visual_color_matches_json_variants",
         "style_alignment": "visual_style_matches_product_description",
         "material_consistency": "visual_material_matches_composition_data",
         "quality_verification": "visual_quality_matches_claimed_level"
       },
-      "completeness_validation": {
-        "required_fields": "all_tier_1_and_tier_2_populated",
-        "no_missing_data": "critical_sections_have_content",
-        "placeholder_elimination": "no_template_placeholders_remain"
+      "conflict_resolution": {
+        "priority_sources": ["direct_visual_analysis", "manufacturer_specifications", "product_description"],
+        "resolution_strategy": "evidence_based_decision",
+        "documentation_requirement": "conflict_resolution_noted"
+      }
+    },
+    "enterprise_tagging_validation": {
+      "tier_requirements": {
+        "tier_1_essential": {
+          "minimum_tags": 5,
+          "required_elements": ["primary_category", "subcategory", "primary_color", "formality_level", "season_rating"],
+          "validation": "all_required_present"
+        },
+        "tier_2_commercial": {
+          "recommended_tags": 4,
+          "elements": ["price_segment", "age_demographics", "lifestyle_alignment", "quality_level"],
+          "validation": "business_critical_included"
+        },
+        "tier_3_design": {
+          "applicable_tags": "3-5",
+          "elements": ["fabric_characteristics", "construction_details", "fit_silhouette"],
+          "validation": "design_specific_appropriate"
+        },
+        "tier_4_positioning": {
+          "applicable_tags": "2-4", 
+          "elements": ["aesthetic_style", "occasions", "wardrobe_role"],
+          "validation": "market_positioning_clear"
+        },
+        "tier_5_specialized": {
+          "applicable_tags": "0-3",
+          "elements": ["performance_features", "sustainability", "specialized_categories"],
+          "validation": "feature_supported_by_evidence"
+        }
+      },
+      "tag_combination_rules": {
+        "minimum_total": 9,
+        "optimal_range": "12-15",
+        "maximum_limit": 20,
+        "mutual_exclusivity_check": "required",
+        "dependency_validation": "required"
+      },
+      "mutually_exclusive_groups": [
+        {
+          "group": "formality_levels",
+          "exclusive_tags": ["casual", "formal", "black_tie"],
+          "rule": "only_one_per_group"
+        },
+        {
+          "group": "fit_types", 
+          "exclusive_tags": ["fitted", "oversized", "loose_fit"],
+          "rule": "only_one_per_group"
+        },
+        {
+          "group": "dress_lengths",
+          "exclusive_tags": ["mini", "midi", "maxi"],
+          "rule": "only_one_per_group"
+        },
+        {
+          "group": "price_segments",
+          "exclusive_tags": ["luxury", "value", "fast_fashion"],
+          "rule": "only_one_per_group"
+        },
+        {
+          "group": "age_demographics",
+          "exclusive_tags": ["junior", "womens"],
+          "rule": "only_one_per_group"
+        }
+      ],
+      "conditional_requirements": {
+        "activewear_requirements": {
+          "trigger": "if_category_activewear",
+          "required_tags": ["performance_fabric", "stretch_rating", "activity_type"],
+          "validation": "activewear_specific_validation"
+        },
+        "formal_requirements": {
+          "trigger": "if_formality_formal_or_cocktail", 
+          "required_tags": ["quality_level_premium_plus", "occasion_specific"],
+          "validation": "formal_wear_standards"
+        },
+        "outerwear_requirements": {
+          "trigger": "if_category_outerwear",
+          "required_tags": ["seasonal_rating", "layering_capability"],
+          "validation": "outerwear_functionality_check"
+        },
+        "plus_size_requirements": {
+          "trigger": "if_specialized_plus_size",
+          "required_tags": ["curve_friendly", "size_inclusive"],
+          "validation": "inclusive_sizing_standards"
+        },
+        "luxury_requirements": {
+          "trigger": "if_price_segment_luxury",
+          "required_tags": ["quality_level_luxury", "construction_quality_premium"],
+          "validation": "luxury_standards_compliance"
+        }
+      }
+    },
+    "description_validation": {
+      "formula_compliance": {
+        "opening_hook": {
+          "word_count": "25-30",
+          "required_elements": ["emotional_trigger", "hero_benefit", "quality_indicator"],
+          "validation": "formula_adherence"
+        },
+        "technical_benefits": {
+          "word_count": "40-50",
+          "required_elements": ["fabric_story", "construction_benefits", "functional_features"],
+          "validation": "technical_accuracy"
+        },
+        "lifestyle_integration": {
+          "word_count": "35-45",
+          "required_elements": ["occasion_versatility", "styling_possibilities", "confidence_boost"],
+          "validation": "lifestyle_relevance"
+        },
+        "value_proposition": {
+          "word_count": "20-25",
+          "required_elements": ["investment_justification", "brand_promise", "call_to_action"],
+          "validation": "conversion_optimization"
+        }
+      },
+      "quality_standards": {
+        "readability": "grade_8_level_maximum",
+        "engagement": "emotional_connection_present",
+        "seo_optimization": "3-5_keywords_integrated",
+        "conversion_elements": "psychological_triggers_applied"
+      }
+    },
+    "naming_validation": {
+      "variation_requirements": {
+        "name_count": 5,
+        "hook_count": 5,
+        "uniqueness": "distinct_approaches",
+        "brand_consistency": "voice_alignment"
+      },
+      "psychological_trigger_coverage": [
+        "problem_solution",
+        "lifestyle_aspiration",
+        "urgency_value",
+        "social_proof", 
+        "transformation"
+      ],
+      "seo_compliance": {
+        "keyword_integration": "natural_inclusion",
+        "search_intent_alignment": "target_audience_focused",
+        "brand_consistency": "voice_maintained"
+      }
+    },
+    "html_output_validation": {
+      "template_compliance": {
+        "component_usage": "proper_component_references",
+        "css_external": "no_inline_styles",
+        "responsive_design": "mobile_optimized",
+        "accessibility": "wcag_compliant"
+      },
+      "content_quality": {
+        "no_placeholders": "all_content_populated",
+        "professional_presentation": "enterprise_standard",
+        "consistency": "formatting_uniform",
+        "completeness": "all_sections_included"
       }
     }
   },
   "validation_workflow": {
-    "pre_analysis": [
-      "image_quality_check",
-      "json_data_completeness",
-      "taxonomy_reference_loaded"
+    "pre_analysis_checks": [
+      "image_quality_verification",
+      "json_data_completeness_check",
+      "taxonomy_reference_accessibility",
+      "external_resource_availability"
     ],
-    "during_analysis": [
-      "real_time_tag_validation",
-      "cross_reference_consistency",
-      "tier_progression_compliance"
+    "phase_validation_checkpoints": [
+      {
+        "phase": "image_analysis",
+        "checkpoints": ["quality_assessment", "category_identification", "color_accuracy", "construction_evaluation"]
+      },
+      {
+        "phase": "json_extraction", 
+        "checkpoints": ["data_completeness", "variant_consistency", "specification_accuracy", "enhancement_identification"]
+      },
+      {
+        "phase": "cross_reference",
+        "checkpoints": ["consistency_validation", "conflict_resolution", "gap_analysis", "enhancement_planning"]
+      },
+      {
+        "phase": "enterprise_tagging",
+        "checkpoints": ["tier_completion", "rule_compliance", "tag_quality", "validation_confirmation"]
+      },
+      {
+        "phase": "description_generation",
+        "checkpoints": ["formula_compliance", "word_count_adherence", "quality_standards", "optimization_integration"]
+      },
+      {
+        "phase": "naming_hooks",
+        "checkpoints": ["variation_quality", "psychological_trigger_coverage", "seo_optimization", "brand_consistency"]
+      },
+      {
+        "phase": "html_generation",
+        "checkpoints": ["template_accuracy", "component_integration", "styling_consistency", "responsive_functionality"]
+      }
     ],
-    "post_analysis": [
-      "final_tag_validation",
-      "description_quality_check",
-      "template_completeness_verification",
-      "responsive_design_validation"
+    "final_validation_requirements": [
+      "complete_content_population",
+      "professional_presentation_standards",
+      "enterprise_compliance_verification",
+      "technical_functionality_confirmation",
+      "quality_assurance_completion"
     ]
+  },
+  "error_handling": {
+    "image_analysis_issues": {
+      "poor_quality": "proceed_with_limitations_noted",
+      "ambiguous_category": "provide_alternative_classifications",
+      "unclear_details": "focus_on_observable_elements",
+      "styled_presentation": "analyze_primary_garment_focus"
+    },
+    "json_data_issues": {
+      "missing_required_fields": "flag_gaps_proceed_with_available",
+      "inconsistent_variants": "note_discrepancies_use_best_available",
+      "conflicting_information": "apply_priority_source_hierarchy",
+      "incomplete_specifications": "supplement_with_visual_analysis"
+    },
+    "validation_failures": {
+      "insufficient_tags": "add_additional_appropriate_tags",
+      "rule_violations": "correct_tag_combinations",
+      "quality_standards_unmet": "enhance_content_to_meet_standards",
+      "template_issues": "apply_correct_component_usage"
+    }
   }
 }

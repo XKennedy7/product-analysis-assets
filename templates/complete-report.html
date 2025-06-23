@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Product Analysis Report - {{PRODUCT_TITLE}}</title>
+    <link rel="stylesheet" href="https://yourusername.github.io/product-analysis-assets/product-analysis-styles.css">
+</head>
+<body>
+    <div class="container">
+        {{>header product_title=PRODUCT_TITLE}}
+        
+        <div class="content">
+            <!-- PRODUCT IDENTIFICATION -->
+            {{>section title="Product Identification" content=product_identification_grid}}
+
+            <!-- ENTERPRISE TAG CLASSIFICATION -->
+            {{>section title="Enterprise Tag Classification"}}
+                {{>tag-output tag_string=ENTERPRISE_TAG_STRING tiers=tag_breakdown}}
+            {{/section}}
+            
+            <!-- QUALITY ASSESSMENT -->
+            {{>section title="Quality & Construction Assessment" content=quality_assessment}}
+
+            <!-- DESIGN SPECIFICATIONS -->
+            {{>section title="Complete Design Specifications" content=design_specifications}}
+
+            <!-- MARKET INTELLIGENCE -->
+            {{>section title="Market Intelligence & Positioning" content=market_intelligence}}
+
+            <!-- SIZE & AVAILABILITY -->
+            {{>section title="Size & Availability Information" content=size_availability}}
+
+            <!-- COMPREHENSIVE STYLING CONTEXT -->
+            {{>section title="Comprehensive Styling Context & Usage" content=styling_context}}
+
+            <!-- ENHANCED NAMING & HOOKS -->
+            {{>section title="Enhanced Product Naming & Marketing Hooks"}}
+                {{>data-grid items=naming_hooks}}
+            {{/section}}
+
+            <!-- ENHANCED PRODUCT DESCRIPTION -->
+            {{>section title="Complete Enhanced Product Description"}}
+                {{>product-description opening_hook=OPENING_HOOK technical_benefits=TECHNICAL_BENEFITS lifestyle_integration=LIFESTYLE_INTEGRATION value_proposition=VALUE_PROPOSITION}}
+            {{/section}}
+
+            <!-- KEY BENEFITS & FEATURES -->
+            {{>section title="Key Benefits & Features"}}
+                {{>benefits-features benefits=customer_benefits features=product_features}}
+            {{/section}}
+
+            <!-- QUALITY & TECHNICAL SPECIFICATIONS -->
+            {{>section title="Quality & Technical Specifications" content=quality_tech_specs}}
+
+            <!-- FIT & MEASUREMENTS -->
+            {{>section title="Fit & Measurements Guide" content=fit_measurements}}
+
+            <!-- STYLING & SEASONAL GUIDE -->
+            {{>section title="Styling & Seasonal Guide" content=styling_seasonal}}
+
+            <!-- ENHANCED KEY HIGHLIGHTS -->
+            {{>highlights title="Key Highlights" items=key_highlights}}
+
+            <!-- METADATA -->
+            {{>section title="Additional Information & Performance Data" content=metadata}}
+        </div>
+        
+        {{>footer}}
+    </div>
+</body>
+</html>

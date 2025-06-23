@@ -1,1 +1,73 @@
-
+{
+  "analysis_config": {
+    "analysis_depth": "enterprise",
+    "processing_level": "comprehensive",
+    "output_quality": "production_ready"
+  },
+  "tagging_defaults": {
+    "min_tags": 9,
+    "optimal_tags": "12-15",
+    "max_tags": 20,
+    "tier_priority": ["tier_1_essential", "tier_2_commercial", "tier_3_design", "tier_4_positioning", "tier_5_specialized"],
+    "required_tiers": ["tier_1_essential_identity", "tier_2_commercial_intelligence"],
+    "validation_enabled": true
+  },
+  "description_formula": {
+    "structure": "hook+benefits+lifestyle+value",
+    "word_counts": {
+      "opening_hook": "25-30",
+      "technical_benefits": "40-50", 
+      "lifestyle_integration": "35-45",
+      "value_proposition": "20-25"
+    },
+    "optimization": {
+      "seo_keywords": "3-5",
+      "readability_score": "60+",
+      "conversion_elements": "required",
+      "emotional_triggers": "required"
+    }
+  },
+  "naming_formula": {
+    "structure": "aesthetic+material+garment+benefit+occasion",
+    "variations": 5,
+    "optimization": ["seo_keywords", "emotional_triggers", "brand_consistency"]
+  },
+  "sections_config": {
+    "required_sections": [
+      "product_identification",
+      "enterprise_tag_classification", 
+      "quality_construction_assessment",
+      "complete_design_specifications",
+      "market_intelligence_positioning",
+      "size_availability_information",
+      "comprehensive_styling_context",
+      "enhanced_naming_hooks",
+      "enhanced_product_description",
+      "key_benefits_features",
+      "quality_technical_specifications",
+      "fit_measurements_guide",
+      "styling_seasonal_guide",
+      "enhanced_key_highlights",
+      "additional_information_metadata"
+    ],
+    "optional_sections": [
+      "sustainability_features",
+      "care_instructions_detailed",
+      "styling_recommendations_advanced"
+    ]
+  },
+  "output_format": {
+    "type": "complete_html_artifact",
+    "template_system": "component_based",
+    "styling": "external_css_cdn",
+    "responsive": true,
+    "accessibility": "wcag_compliant"
+  },
+  "quality_standards": {
+    "no_placeholders": "required",
+    "complete_data_population": "required",
+    "consistent_formatting": "required",
+    "mobile_optimization": "required",
+    "professional_presentation": "required"
+  }
+}

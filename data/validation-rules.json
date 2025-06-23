@@ -1,0 +1,121 @@
+{
+  "validation_rules": {
+    "mandatory_relationships": {
+      "color_consistency": {
+        "rule": "primary_color must match available_variants",
+        "validation": "cross_reference_image_vs_json"
+      },
+      "category_logic": {
+        "rule": "subcategory must belong to primary_category",
+        "validation": "taxonomy_hierarchy_check"
+      },
+      "demographic_alignment": {
+        "rule": "age_group + lifestyle + price_segment must be compatible",
+        "validation": "demographic_compatibility_matrix"
+      },
+      "formality_consistency": {
+        "rule": "formality_level must align with aesthetic_style + occasions",
+        "validation": "formality_occasion_mapping"
+      }
+    },
+    "mutually_exclusive_groups": [
+      {
+        "group": "formality_levels",
+        "exclusive_tags": ["casual", "formal", "black_tie"],
+        "rule": "only_one_per_group"
+      },
+      {
+        "group": "fit_types", 
+        "exclusive_tags": ["fitted", "oversized", "loose_fit"],
+        "rule": "only_one_per_group"
+      },
+      {
+        "group": "dress_lengths",
+        "exclusive_tags": ["mini", "midi", "maxi"],
+        "rule": "only_one_per_group"
+      },
+      {
+        "group": "price_segments",
+        "exclusive_tags": ["luxury", "value", "fast_fashion"],
+        "rule": "only_one_per_group"
+      },
+      {
+        "group": "age_demographics",
+        "exclusive_tags": ["junior", "womens"],
+        "rule": "only_one_per_group"
+      }
+    ],
+    "conditional_requirements": {
+      "activewear_requirements": {
+        "trigger": "if_category_activewear",
+        "required_tags": ["performance_fabric", "stretch_rating", "activity_type"],
+        "validation": "activewear_specific_validation"
+      },
+      "formal_requirements": {
+        "trigger": "if_formality_formal_or_cocktail", 
+        "required_tags": ["quality_level_premium_plus", "occasion_specific"],
+        "validation": "formal_wear_standards"
+      },
+      "outerwear_requirements": {
+        "trigger": "if_category_outerwear",
+        "required_tags": ["seasonal_rating", "layering_capability"],
+        "validation": "outerwear_functionality_check"
+      },
+      "plus_size_requirements": {
+        "trigger": "if_specialized_plus_size",
+        "required_tags": ["curve_friendly", "size_inclusive"],
+        "validation": "inclusive_sizing_standards"
+      },
+      "luxury_requirements": {
+        "trigger": "if_price_segment_luxury",
+        "required_tags": ["quality_level_luxury", "construction_quality_premium"],
+        "validation": "luxury_standards_compliance"
+      }
+    },
+    "tier_dependency_rules": {
+      "tier_completion_order": {
+        "rule": "tier_1_complete_before_others",
+        "validation": "all tier_1 tags required before adding tier_2+"
+      },
+      "recommended_progression": {
+        "rule": "tier_2_recommended_for_tier_3",
+        "validation": "price_segment + quality_level recommended before detailed design tags"
+      },
+      "specialized_justification": {
+        "rule": "tier_5_requires_justification", 
+        "validation": "specialized features must be supported by product attributes"
+      }
+    },
+    "data_consistency_checks": {
+      "image_vs_json": {
+        "color_verification": "visual_color_matches_json_variants",
+        "style_alignment": "visual_style_matches_product_description",
+        "material_consistency": "visual_material_matches_composition_data",
+        "quality_verification": "visual_quality_matches_claimed_level"
+      },
+      "completeness_validation": {
+        "required_fields": "all_tier_1_and_tier_2_populated",
+        "no_missing_data": "critical_sections_have_content",
+        "placeholder_elimination": "no_template_placeholders_remain"
+      }
+    }
+  },
+  "validation_workflow": {
+    "pre_analysis": [
+      "image_quality_check",
+      "json_data_completeness",
+      "taxonomy_reference_loaded"
+    ],
+    "during_analysis": [
+      "real_time_tag_validation",
+      "cross_reference_consistency",
+      "tier_progression_compliance"
+    ],
+    "post_analysis": [
+      "final_tag_validation",
+      "description_quality_check",
+      "template_completeness_verification",
+      "responsive_design_validation"
+    ]
+  }
+}

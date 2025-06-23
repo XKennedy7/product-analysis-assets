@@ -2,7 +2,51 @@
   "analysis_config": {
     "analysis_depth": "enterprise",
     "processing_level": "comprehensive",
-    "output_quality": "production_ready"
+    "output_quality": "production_ready",
+    "validation_level": "strict",
+    "cross_reference_required": true
+  },
+  "processing_phases": {
+    "phase_1_image_analysis": {
+      "required": true,
+      "steps": ["quality_verification", "garment_identification", "detailed_visual_analysis", "market_positioning_assessment"],
+      "validation_checkpoints": ["image_quality", "category_identification", "color_accuracy", "quality_assessment"]
+    },
+    "phase_2_json_extraction": {
+      "required": true,
+      "steps": ["core_information", "variant_analysis", "specification_dive", "quality_assessment"],
+      "validation_checkpoints": ["data_completeness", "variant_consistency", "specification_accuracy"]
+    },
+    "phase_3_cross_reference": {
+      "required": true,
+      "steps": ["consistency_validation", "conflict_resolution", "gap_analysis", "enhancement_planning"],
+      "validation_checkpoints": ["image_json_alignment", "data_consistency", "gap_identification"]
+    },
+    "phase_4_enterprise_tagging": {
+      "required": true,
+      "steps": ["tier_1_essential", "tier_2_commercial", "tier_3_design", "tier_4_positioning", "tier_5_specialized", "validation_optimization"],
+      "validation_checkpoints": ["minimum_tag_count", "rule_compliance", "quality_assessment"]
+    },
+    "phase_5_description_generation": {
+      "required": true,
+      "steps": ["opening_hook", "technical_benefits", "lifestyle_integration", "value_proposition"],
+      "validation_checkpoints": ["word_count_compliance", "formula_adherence", "quality_standards"]
+    },
+    "phase_6_naming_hooks": {
+      "required": true,
+      "steps": ["name_variations", "marketing_hooks", "seo_optimization"],
+      "validation_checkpoints": ["variation_quality", "hook_effectiveness", "seo_compliance"]
+    },
+    "phase_7_html_generation": {
+      "required": true,
+      "steps": ["template_selection", "content_population", "component_integration"],
+      "validation_checkpoints": ["template_accuracy", "content_completeness", "styling_consistency"]
+    },
+    "phase_8_final_validation": {
+      "required": true,
+      "steps": ["content_qa", "technical_validation", "enterprise_compliance", "output_preparation"],
+      "validation_checkpoints": ["quality_standards", "technical_functionality", "enterprise_compliance"]
+    }
   },
   "tagging_defaults": {
     "min_tags": 9,
@@ -10,7 +54,8 @@
     "max_tags": 20,
     "tier_priority": ["tier_1_essential", "tier_2_commercial", "tier_3_design", "tier_4_positioning", "tier_5_specialized"],
     "required_tiers": ["tier_1_essential_identity", "tier_2_commercial_intelligence"],
-    "validation_enabled": true
+    "validation_enabled": true,
+    "cross_reference_validation": true
   },
   "description_formula": {
     "structure": "hook+benefits+lifestyle+value",
@@ -25,12 +70,27 @@
       "readability_score": "60+",
       "conversion_elements": "required",
       "emotional_triggers": "required"
-    }
+    },
+    "psychological_triggers": [
+      "problem_solution",
+      "lifestyle_aspiration", 
+      "urgency_value",
+      "social_proof",
+      "transformation"
+    ]
   },
   "naming_formula": {
     "structure": "aesthetic+material+garment+benefit+occasion",
     "variations": 5,
-    "optimization": ["seo_keywords", "emotional_triggers", "brand_consistency"]
+    "hook_variations": 5,
+    "optimization": ["seo_keywords", "emotional_triggers", "brand_consistency"],
+    "psychological_patterns": [
+      "problem_solution",
+      "lifestyle_aspiration",
+      "urgency_value", 
+      "social_proof",
+      "transformation_promise"
+    ]
   },
   "sections_config": {
     "required_sections": [
@@ -53,21 +113,56 @@
     "optional_sections": [
       "sustainability_features",
       "care_instructions_detailed",
-      "styling_recommendations_advanced"
-    ]
+      "styling_recommendations_advanced",
+      "competitive_analysis",
+      "market_trends_alignment"
+    ],
+    "section_requirements": {
+      "product_identification": {
+        "elements": ["product_title", "brand_vendor", "category_classification", "key_specifications", "unique_identifiers"],
+        "validation": ["completeness", "accuracy", "consistency"]
+      },
+      "enterprise_tag_classification": {
+        "elements": ["tag_string", "tier_breakdown", "tag_count", "validation_confirmation"],
+        "validation": ["minimum_count", "rule_compliance", "accuracy"]
+      }
+    }
   },
   "output_format": {
     "type": "complete_html_artifact",
     "template_system": "component_based",
     "styling": "external_css_cdn",
     "responsive": true,
-    "accessibility": "wcag_compliant"
+    "accessibility": "wcag_compliant",
+    "professional_presentation": "required"
   },
   "quality_standards": {
     "no_placeholders": "required",
     "complete_data_population": "required",
     "consistent_formatting": "required",
     "mobile_optimization": "required",
-    "professional_presentation": "required"
+    "professional_presentation": "required",
+    "cross_reference_validation": "required",
+    "enterprise_compliance": "required"
+  },
+  "validation_checkpoints": {
+    "pre_analysis": [
+      "image_quality_check",
+      "json_data_completeness",
+      "taxonomy_reference_loaded"
+    ],
+    "during_analysis": [
+      "phase_completion_validation",
+      "real_time_tag_validation",
+      "cross_reference_consistency",
+      "tier_progression_compliance"
+    ],
+    "post_analysis": [
+      "final_tag_validation",
+      "description_quality_check",
+      "template_completeness_verification",
+      "responsive_design_validation",
+      "enterprise_standards_compliance"
+    ]
   }
 }
